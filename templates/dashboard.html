@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emergency System Dashboard</title>
+    <meta http-equiv="refresh" content="5">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Emergency System Dashboard</h1>
+    <table>
+        <tr>
+            <th>Topic</th>
+            <th>Message</th>
+            <th>Severity</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for event in events %}
+        <tr>
+            <td>{{ event[0] }}</td>
+            <td>{{ event[1] }}</td>
+            <td>{{ event[2] }}</td>
+            <td>{{ event[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
